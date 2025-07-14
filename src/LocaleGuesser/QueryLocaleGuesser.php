@@ -18,6 +18,8 @@ use Lunetics\LocaleBundle\Validator\MetaValidator;
  */
 class QueryLocaleGuesser extends AbstractLocaleGuesser
 {
+    private $queryParameterName;
+
     /**
      * @var string
      */

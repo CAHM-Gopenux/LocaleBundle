@@ -50,6 +50,7 @@ class LocaleUpdateListener implements EventSubscriberInterface
      * @var LoggerInterface
      */
     private $logger;
+    private EventDispatcherInterface $dispatcher;
 
     /**
      * Construct the Locale Update Listener
