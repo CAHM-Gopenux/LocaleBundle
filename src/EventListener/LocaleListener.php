@@ -114,7 +114,7 @@ class LocaleListener implements EventSubscriberInterface
             $request->setLocale($locale);
             $request->attributes->set('_locale', $locale);
 
-            if (($event->getRequestType() === HttpKernelInterface::MASTER_REQUEST || $request->isXmlHttpRequest())
+            if (($event->getRequestType() === HttpKernelInterface::MAIN_REQUEST || $request->isXmlHttpRequest())
                 && ($manager->getGuesser('session') || $manager->getGuesser('cookie'))
             ) {
                 $localeSwitchEvent = new FilterLocaleSwitchEvent($request, $locale);
